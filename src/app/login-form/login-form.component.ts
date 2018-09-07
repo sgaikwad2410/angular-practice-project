@@ -1,0 +1,43 @@
+import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+
+@Component({
+  selector: 'app-login-form',
+  templateUrl: './login-form.component.html',
+  styleUrls: ['./login-form.component.css']
+})
+export class LoginFormComponent implements OnInit {
+
+  constructor(private router:Router, private user:UserService) { }
+
+  form;
+
+  ngOnInit(){
+    this.form = new FormGroup({
+    userId: new FormControl("",Validators.compose([
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(10)
+    ])),
+    userPassword: new FormControl("",Validators.compose([
+      Validators.required,
+      Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{7,}')
+    ])),
+  });
+}
+  title = 'Angular World ';
+  h2Heading = 'LOGIN';
+  paragraph = 'Please enter userID and password';
+  forgotPassword = 'Forgot password?';
+
+  onSubmit = function(user){
+    console.log(user);
+    if(user.userId=='suraj' && user.userPassword=='Sur@j2410'){
+      console.log("You are a Valid User");
+      this.user.setUserLoggedIn();
+      this.router.navigate(['dashboard']);
+    }
+  }
+}

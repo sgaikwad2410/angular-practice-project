@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChange  } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular World ';
-  heading ='login Form';
-  h2Heading = 'Admin Login';
-  paragraph = 'Please enter user name and password';
-  forgotPassword = 'Forgot password?';
+  
 }

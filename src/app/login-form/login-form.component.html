@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="login-form">
+      <div class="main-div">
+        <div class="panel">
+          <h2>{{h2Heading}}</h2>
+          <p>{{paragraph}}</p>
+          </div>
+          <form id="Login" [formGroup] = "form" (ngSubmit) = "onSubmit(form.value)">
+            <div class="form-group">   
+              <input type="email" name="userId" class="form-control" id="inputEmail" placeholder="User Name" formControlName="userId">
+            </div>
+            <div class="form-group">
+              <input type="password" name="userPassword" class="form-control" id="inputPassword" placeholder="Password" formControlName="userPassword">
+            </div>
+            <div class="forgot">
+                <a href="#">{{forgotPassword}}</a>
+             </div>
+                <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Login</button>
+          </form>
+  
+        </div></div>
+</div>
