@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-practice-project';
+  title = 'Angular World ';
+  heading ='login Form';
+  h2Heading = 'Admin Login';
+  paragraph = 'Please enter user name and password';
+  forgotPassword = 'Forgot password?';
 }
