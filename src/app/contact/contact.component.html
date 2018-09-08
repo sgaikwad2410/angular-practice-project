@@ -36,7 +36,9 @@
               </div>
         </div>        
         <div class="col-12 col-sm-6 offset-sm-1">
-            <h5>My Location</h5>                         
+            <h5>My Location</h5><br>  
+            <button (click)="animate()" type="button" class="btn btn-success">Click Me</button><br><br>                                  
+            <p [@myAnimation] = "state" align="center">Angular Animation</p>
         </div>
     </div>
 </div><br><hr>

@@ -13,7 +13,7 @@ import { UserService } from './user.service';
 import { AuthguardGuard } from './authguard.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     ReactiveFormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {
         path:'',
