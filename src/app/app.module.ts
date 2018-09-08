@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { UserService } from './user.service';
 import { AuthguardGuard } from './authguard.guard';
+import { ProfileComponent } from './profile/profile.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { AuthguardGuard } from './authguard.guard';
     DashboardComponentComponent,
     HeaderComponent,
     FooterComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    ProfileComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,17 @@ import { AuthguardGuard } from './authguard.guard';
         path:'dashboard',
         canActivate:[AuthguardGuard],
         component:DashboardComponentComponent
-      }      
+      },
+      {
+        path:'profile',
+        canActivate:[AuthguardGuard],
+        component:ProfileComponent
+      },
+      {
+        path:'contact',
+        canActivate:[AuthguardGuard],
+        component:ContactComponent
+      }       
     ]),
     
   ],

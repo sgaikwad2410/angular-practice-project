@@ -1,0 +1,57 @@
+<ul class="nav nav-tabs mr-auto">
+    <li class="nav-item">
+      <a routerLinkActive="Active current" class="nav-link" routerLink="/dashboard"><span class="fa fa-home fa-lg"></span>Home</a>
+    </li>
+    <li class="nav-item">
+      <a routerLinkActive="Active current" class="nav-link" routerLink="/profile"><span class="fa fa-info fa-lg"></span> Profile</a>
+    </li> 
+    <li class="nav-item">
+      <a routerLinkActive="Active current" class="nav-link" routerLink="/contact"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+    </li>
+    <li class="nav-item">
+      <a routerLinkActive="Disabled current" class="nav-link">Disabled</a>
+    </li>
+    <li class="nav-item" >
+      <a routerLinkActive="Active current" class="nav-link" routerLink="/"><span class="fa fa-sign-out fa-lg"></span>LOGOUT</a>
+    </li>
+  </ul><br>
+<h2 align="center"> My Profile </h2><br><br>
+<div class="container">
+    <div class="row row-content">
+      <div class="col-6">
+          <div class="media">
+              <img class="align-self-center mr-3 img-thumbnail rounded float-left" src="/assets/images/suraj.jpg"  alt="Myimage">
+              <div class="media-body">
+                <h4 class="mt-0">About Me</h4><br>
+                <p>I am insightful performance driven software developer with experience in developing efficient
+                    algorithms, complex APIs, distributed, multi-threaded, localized, pluggable and sellable modular
+                    enterprise web based business applications, products, and tools designed using Scaled Agile
+                    framework</p>
+                <p class="mb-0">My core value includes problem solving approach (Think before you code), self-learning, and
+                    effectively working with team members, adaptable to learn new technologies/tools and my goal is
+                    to use the best abilities as an engineering professional to my organization and be reputed for my
+                    work without stopping of my learning process.</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-6">
+          <h4 align="center"> Qualification Details</h4><br>
+          <table class="table table-bordered  table-hover table-light">
+              <thead>
+                <tr>
+                  <th scope="col">Academics</th>
+                  <th scope="col">University</th>
+                  <th scope="col">Grade</th>
+                 </tr>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let details of myDetails">
+                <td>{{details.academic}}</td>
+                <td>{{details.university}}</td>
+                <td>{{details.grade}}</td>
+                </tr>
+               </tbody>
+            </table>
+      </div>
+    </div>
+</div><br><hr>

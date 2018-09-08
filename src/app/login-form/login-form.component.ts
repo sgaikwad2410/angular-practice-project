@@ -13,6 +13,8 @@ export class LoginFormComponent implements OnInit {
   constructor(private router:Router, private user:UserService) { }
 
   form;
+  isTrue = false;
+  warning;
 
   ngOnInit(){
     this.form = new FormGroup({
@@ -29,15 +31,21 @@ export class LoginFormComponent implements OnInit {
 }
   title = 'Angular World ';
   h2Heading = 'LOGIN';
-  paragraph = 'Please enter userID and password';
+  paragraph = 'Please enter userId and password';
   forgotPassword = 'Forgot password?';
 
   onSubmit = function(user){
+    
     console.log(user);
     if(user.userId=='suraj' && user.userPassword=='Sur@j2410'){
       console.log("You are a Valid User");
       this.user.setUserLoggedIn();
       this.router.navigate(['dashboard']);
+    }
+    else{
+      console.log("You are not a Valid User");
+      this.isTrue = true;
+      this.warning = 'Please Enter Valid UserId Or Password';
     }
   }
 }
