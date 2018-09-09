@@ -22,4 +22,9 @@ describe('ProfileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return array length as 4',()=>{
+    expect(component.myDetails.length).toEqual(4);  
+  })
+  
 });

@@ -10,8 +10,8 @@ import { UserService } from '../user.service';
 })
 export class LoginFormComponent implements OnInit {
 
-  constructor(private router:Router, private user:UserService) { }
-
+  constructor( private router:Router,private user:UserService) { }
+ 
   form;
   isTrue = false;
   warning;
@@ -29,7 +29,6 @@ export class LoginFormComponent implements OnInit {
     ])),
   });
 }
-  title = 'Angular World ';
   h2Heading = 'LOGIN';
   paragraph = 'Please enter userId and password';
   forgotPassword = 'Forgot password?';

@@ -22,4 +22,8 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have title Angular World',()=>{
+    expect(component.title).toBe('Angular World ');
+  });
 });

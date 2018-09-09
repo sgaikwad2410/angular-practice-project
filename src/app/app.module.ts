@@ -28,8 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpModule,
-    BrowserAnimationsModule,
+    HttpModule,   
     RouterModule.forRoot([
       {
         path:'',
@@ -51,7 +50,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         component:ContactComponent
       }       
     ]),
-    
+    BrowserAnimationsModule    
   ],
   providers: [UserService,AuthguardGuard],
   bootstrap: [AppComponent]

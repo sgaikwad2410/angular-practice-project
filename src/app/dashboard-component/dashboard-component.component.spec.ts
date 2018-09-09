@@ -11,7 +11,7 @@ describe('DashboardComponentComponent', () => {
       declarations: [ DashboardComponentComponent ]
     })
     .compileComponents();
-  }));
+   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DashboardComponentComponent);
@@ -22,4 +22,5 @@ describe('DashboardComponentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+ 
 });
