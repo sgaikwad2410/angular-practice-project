@@ -36,7 +36,7 @@ export class LoginFormComponent implements OnInit {
   onSubmit = function(user){
     
     console.log(user);
-    if(user.userId=='suraj' && user.userPassword=='Sur@j2410'){
+    if(user.userId=='admin' && user.userPassword=='Admin@123'){
       console.log("You are a Valid User");
       this.user.setUserLoggedIn();
       this.router.navigate(['dashboard']);
